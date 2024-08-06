@@ -6,7 +6,7 @@ import io.justina.management.model.User;
 import io.justina.management.repository.MedicalStaffRepository;
 import io.justina.management.repository.PatientRepository;
 import io.justina.management.repository.UserRepository;
-import io.justina.management.service.token.TokenService;
+import io.justina.management.service.impl.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

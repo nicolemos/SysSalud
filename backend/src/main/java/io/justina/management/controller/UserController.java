@@ -1,8 +1,8 @@
-package io.justina.management.controller.user;
+package io.justina.management.controller;
 
-import io.justina.management.dto.user.UserRegisterDataDTO;
-import io.justina.management.dto.user.UserResponseDataDTO;
-import io.justina.management.service.user.IUserService;
+import io.justina.management.dto.request.UserRegisterDataDTO;
+import io.justina.management.dto.response.UserResponseDataDTO;
+import io.justina.management.service.IUserService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

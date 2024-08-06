@@ -4,6 +4,7 @@ import io.justina.management.dto.request.FinancierRegisterDTO;
 import io.justina.management.dto.response.FinancierResponseDTO;
 import io.justina.management.model.Financier;
 import io.justina.management.repository.FinancierRepository;
+import io.justina.management.service.IFinancierService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

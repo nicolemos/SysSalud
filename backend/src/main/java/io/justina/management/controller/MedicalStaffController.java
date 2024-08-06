@@ -2,7 +2,7 @@ package io.justina.management.controller;
 
 import io.justina.management.dto.request.MedicalStaffRegisterDTO;
 import io.justina.management.dto.response.MedicalStaffResponseDTO;
-import io.justina.management.service.authentication.AuthenticationService;
+import io.justina.management.service.AuthenticationService;
 import io.justina.management.service.IMedicalStaffService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;

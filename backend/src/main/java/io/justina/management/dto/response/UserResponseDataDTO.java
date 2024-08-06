@@ -1,4 +1,4 @@
-package io.justina.management.dto.user;
+package io.justina.management.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

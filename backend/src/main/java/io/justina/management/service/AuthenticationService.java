@@ -1,11 +1,11 @@
-package io.justina.management.service.authentication;
+package io.justina.management.service;
 
-import io.justina.management.dto.jwttoken.DataJWTTokenDTO;
-import io.justina.management.dto.user.UserAuthenticateDataDTO;
+import io.justina.management.dto.DataJWTTokenDTO;
+import io.justina.management.dto.UserAuthenticateDataDTO;
 import io.justina.management.model.MedicalStaff;
 import io.justina.management.model.User;
 import io.justina.management.repository.UserRepository;
-import io.justina.management.service.token.TokenService;
+import io.justina.management.service.impl.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.access.AccessDeniedException;

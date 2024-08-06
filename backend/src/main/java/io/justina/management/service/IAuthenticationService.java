@@ -1,7 +1,7 @@
-package io.justina.management.service.authentication;
+package io.justina.management.service;
 
-import io.justina.management.dto.jwttoken.DataJWTTokenDTO;
-import io.justina.management.dto.user.UserAuthenticateDataDTO;
+import io.justina.management.dto.DataJWTTokenDTO;
+import io.justina.management.dto.UserAuthenticateDataDTO;
 import org.springframework.security.core.Authentication;
 
 /**

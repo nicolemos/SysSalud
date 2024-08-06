@@ -1,9 +1,9 @@
-package io.justina.management.controller.authentication;
+package io.justina.management.controller;
 
 
-import io.justina.management.dto.jwttoken.DataJWTTokenDTO;
-import io.justina.management.dto.user.UserAuthenticateDataDTO;
-import io.justina.management.service.authentication.IAuthenticationService;
+import io.justina.management.dto.DataJWTTokenDTO;
+import io.justina.management.dto.UserAuthenticateDataDTO;
+import io.justina.management.service.IAuthenticationService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,11 +1,12 @@
-package io.justina.management.service.user;
+package io.justina.management.service.impl;
 
-import io.justina.management.dto.user.UserRegisterDataDTO;
-import io.justina.management.dto.user.UserResponseDataDTO;
+import io.justina.management.dto.request.UserRegisterDataDTO;
+import io.justina.management.dto.response.UserResponseDataDTO;
 import io.justina.management.enums.RoleEnum;
 import io.justina.management.exception.BadRequestException;
 import io.justina.management.model.User;
 import io.justina.management.repository.UserRepository;
+import io.justina.management.service.IUserService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

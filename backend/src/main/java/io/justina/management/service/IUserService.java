@@ -1,8 +1,8 @@
 
-package io.justina.management.service.user;
+package io.justina.management.service;
 
-import io.justina.management.dto.user.UserRegisterDataDTO;
-import io.justina.management.dto.user.UserResponseDataDTO;
+import io.justina.management.dto.request.UserRegisterDataDTO;
+import io.justina.management.dto.response.UserResponseDataDTO;
 
 import java.util.List;
 

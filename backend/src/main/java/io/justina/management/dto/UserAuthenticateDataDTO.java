@@ -1,4 +1,4 @@
-package io.justina.management.dto.user;
+package io.justina.management.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package io.justina.management.controller.medicalstaff;
+package io.justina.management.controller;
 
 import io.justina.management.dto.request.MedicalStaffRegisterDTO;
 import io.justina.management.dto.response.MedicalStaffResponseDTO;

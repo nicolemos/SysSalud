@@ -1,5 +1,5 @@
 
-package io.justina.management.config.security;
+package io.justina.management.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

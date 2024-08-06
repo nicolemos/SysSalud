@@ -1,4 +1,4 @@
-package io.justina.management.config.cors;
+package io.justina.management.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

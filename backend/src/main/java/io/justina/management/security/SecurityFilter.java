@@ -1,4 +1,4 @@
-package io.justina.management.config.security;
+package io.justina.management.security;
 
 import io.justina.management.model.MedicalStaff;
 import io.justina.management.model.Patient;

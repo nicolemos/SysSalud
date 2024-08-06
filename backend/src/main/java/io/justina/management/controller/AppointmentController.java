@@ -1,4 +1,4 @@
-package io.justina.management.controller.appointment;
+package io.justina.management.controller;
 
 
 import io.justina.management.dto.request.AppointmentDataRegisterDTO;

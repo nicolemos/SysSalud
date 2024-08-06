@@ -1,4 +1,4 @@
-package io.justina.management.config.mapper;
+package io.justina.management.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

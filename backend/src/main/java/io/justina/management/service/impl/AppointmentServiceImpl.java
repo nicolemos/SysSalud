@@ -18,126 +18,23 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Implementación del servicio para gestionar citas médicas en el sistema.
- */
+
 @Service
 public class AppointmentServiceImpl implements AppointmentService {
 
-    /**
-     * Repositorio de citas médicas.
-     */
-    private final AppointmentRepository appointmentRepository;
-    private final PatientRepository patientRepository;
-    private final MedicalStaffRepository medicalStaffRepository;
-    /**
-     * ModelMapper para mapear entidades y DTO.
-     */
+
+    @Autowired
+    private  AppointmentRepository appointmentRepository;
+    @Autowired
+    private  PatientRepository patientRepository;
+    @Autowired
+    private  MedicalStaffRepository medicalStaffRepository;
+
     private final ModelMapper modelMapper = new ModelMapper();
 
-    /**
-     * Constructor que inicializa el servicio con el repositorio de citas médicas.
-     *
-     * @param appointmentRepository Repositorio de citas médicas.
-     */
-    @Autowired
-    public AppointmentServiceImpl(AppointmentRepository appointmentRepository, MedicalStaffRepository medicalStaffRepository, PatientRepository patientRepository) {
-        this.appointmentRepository = appointmentRepository;
-        this.medicalStaffRepository = medicalStaffRepository;
-        this.patientRepository = patientRepository;
-    }
-    /**
-     * Registra una nueva cita médica en el sistema.
-     *
-     * @param appointmentData Datos de la cita médica que se desea registrar.
-     * @return DTO con la información de la cita médica registrada.
-     */
-    @Transactional
-    @Override
-    public AppointmentResponseDTO registerAppointment(AppointmentDataRegisterDTO appointmentData) {
-        if (!patientRepository.existsById(appointmentData.getIdPatient())) {
-            throw new BadRequestException("El id del paciente no fue encontrado");
-        }
-        if (!medicalStaffRepository.existsById(appointmentData.getIdMedicalStaff())) {
-            throw new BadRequestException("El id del profesional no fue encontrado");
-        }
 
-        Patient patient = patientRepository.findById(appointmentData.getIdPatient()).orElseThrow(() -> new BadRequestException("El id del paciente no fue encontrado"));
-        MedicalStaff medicalStaff = medicalStaffRepository.findById(appointmentData.getIdMedicalStaff()).orElseThrow(() -> new BadRequestException("El id del profesional no fue encontrado"));
 
-        Appointment appointment = modelMapper.map(appointmentData, Appointment.class);
-        appointment = appointmentRepository.save(appointment);
 
-        AppointmentResponseDTO responseDTO = modelMapper.map(appointment, AppointmentResponseDTO.class);
-        responseDTO.setIdPatient(patient.getId());
-        responseDTO.setFullNamePatient(patient.getUser().getFirstName()+ " " + patient.getUser().getLastName());
-        responseDTO.setIdMedicalStaff(medicalStaff.getId());
-        responseDTO.setFullNameMedicalStaff(medicalStaff.getUser().getFirstName() + " " + medicalStaff.getUser().getLastName());
-        responseDTO.setSpecialty(medicalStaff.getSpecialities().toString());
-        responseDTO.setHealthCenter(appointmentData.getHealthCenter());
-
-        return responseDTO;
-    }
-
-    /**
-     * Obtiene todas las citas médicas registradas en el sistema.
-     *
-     * @return Lista de todas las citas médicas registradas.
-     */
-    @Override
-    public List<AppointmentResponseDTO> getAllAppointments() {
-        List<Appointment> appointments = appointmentRepository.findAll();
-        return getAppointmentResponseDTOS(appointments);
-    }
-    /**
-     * Obtiene todas las citas médicas registradas en el sistema para un paciente específico.
-     *
-     * @param idPatient Identificador del paciente.
-     * @return Lista de todas las citas médicas para el paciente especificado.
-     */
-    @Override
-    public List<AppointmentResponseDTO> getAppointmentsByPatient(Long idPatient) {
-        List<Appointment> appointments = appointmentRepository.findByPatient_Id(idPatient);
-        return getAppointmentResponseDTOS(appointments);
-    }
-    /**
-     * Obtiene todas las citas médicas registradas en el sistema para un médico específico.
-     *
-     * @param idDoctor Identificador del médico.
-     * @return Lista de todas las citas médicas para el médico especificado.
-     */
-    @Override
-    public List<AppointmentResponseDTO> getAppointmentsByMedicalStaff(Long idDoctor) {
-        List<Appointment> appointments = appointmentRepository.findByMedicalStaff_Id(idDoctor);
-        return getAppointmentResponseDTOS(appointments);
-    }
-
-    private List<AppointmentResponseDTO> getAppointmentResponseDTOS(List<Appointment> appointments) {
-        List<AppointmentResponseDTO> responseDTOs = new ArrayList<>();
-
-        for (Appointment appointment : appointments) {
-            Patient patient = appointment.getPatient();
-            MedicalStaff medicalStaff = appointment.getMedicalStaff();
-
-            AppointmentResponseDTO responseDTO = modelMapper.map(appointment, AppointmentResponseDTO.class);
-            responseDTO.setIdPatient(patient.getId());
-            responseDTO.setFullNamePatient(patient.getUser().getFirstName() + " " + patient.getUser().getLastName());
-            responseDTO.setIdMedicalStaff(medicalStaff.getId());
-            responseDTO.setFullNameMedicalStaff(medicalStaff.getUser().getFirstName() + " " + medicalStaff.getUser().getLastName());
-            responseDTO.setSpecialty(medicalStaff.getSpecialities().toString());
-            responseDTO.setHealthCenter(appointment.getHealthCenter());
-
-            responseDTOs.add(responseDTO);
-        }
-
-        return responseDTOs;
-    }
-
-    /**
-     * Elimina una cita médica del sistema.
-     *
-     * @param idAppointment Identificador de la cita médica que se desea eliminar.
-     */
     @Transactional
     @Override
     public void deleteAppointment(Long idAppointment) {

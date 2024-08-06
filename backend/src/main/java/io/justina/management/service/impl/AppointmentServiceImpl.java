@@ -1,7 +1,7 @@
 package io.justina.management.service.impl;
 
-import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
-import io.justina.management.dto.appointment.AppointmentResponseDTO;
+import io.justina.management.dto.request.AppointmentDataRegisterDTO;
+import io.justina.management.dto.response.AppointmentResponseDTO;
 import io.justina.management.exception.BadRequestException;
 import io.justina.management.model.Appointment;
 import io.justina.management.model.MedicalStaff;

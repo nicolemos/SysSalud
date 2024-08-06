@@ -1,7 +1,7 @@
 package io.justina.management.controller.medicalstaff;
 
-import io.justina.management.dto.medicalstaff.MedicalStaffRegisterDTO;
-import io.justina.management.dto.medicalstaff.MedicalStaffResponseDTO;
+import io.justina.management.dto.request.MedicalStaffRegisterDTO;
+import io.justina.management.dto.response.MedicalStaffResponseDTO;
 import io.justina.management.service.authentication.AuthenticationService;
 import io.justina.management.service.IMedicalStaffService;
 import io.swagger.v3.oas.annotations.Operation;

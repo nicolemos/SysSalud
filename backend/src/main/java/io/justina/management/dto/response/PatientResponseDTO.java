@@ -1,4 +1,4 @@
-package io.justina.management.dto.patient;
+package io.justina.management.dto.response;
 
 import lombok.Data;
 

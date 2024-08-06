@@ -1,7 +1,7 @@
 package io.justina.management.controller.patient;
 
-import io.justina.management.dto.patient.PatientRequestDTO;
-import io.justina.management.dto.patient.PatientResponseDTO;
+import io.justina.management.dto.request.PatientRequestDTO;
+import io.justina.management.dto.response.PatientResponseDTO;
 import io.justina.management.service.authentication.AuthenticationService;
 import io.justina.management.service.PatientService;
 import io.swagger.v3.oas.annotations.Operation;

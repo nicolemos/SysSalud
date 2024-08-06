@@ -1,7 +1,7 @@
 package io.justina.management.service.impl;
 
-import io.justina.management.dto.medicalstaff.MedicalStaffRegisterDTO;
-import io.justina.management.dto.medicalstaff.MedicalStaffResponseDTO;
+import io.justina.management.dto.request.MedicalStaffRegisterDTO;
+import io.justina.management.dto.response.MedicalStaffResponseDTO;
 import io.justina.management.enums.RoleEnum;
 import io.justina.management.model.MedicalStaff;
 import io.justina.management.model.User;

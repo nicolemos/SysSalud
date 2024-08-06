@@ -1,7 +1,7 @@
 package io.justina.management.service.impl;
 
-import io.justina.management.dto.financier.FinancierRegisterDTO;
-import io.justina.management.dto.financier.FinancierResponseDTO;
+import io.justina.management.dto.request.FinancierRegisterDTO;
+import io.justina.management.dto.response.FinancierResponseDTO;
 import io.justina.management.model.Financier;
 import io.justina.management.repository.FinancierRepository;
 import org.modelmapper.ModelMapper;

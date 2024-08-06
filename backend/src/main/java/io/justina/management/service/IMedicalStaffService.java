@@ -1,7 +1,7 @@
 package io.justina.management.service;
 
-import io.justina.management.dto.medicalstaff.MedicalStaffResponseDTO;
-import io.justina.management.dto.medicalstaff.MedicalStaffRegisterDTO;
+import io.justina.management.dto.response.MedicalStaffResponseDTO;
+import io.justina.management.dto.request.MedicalStaffRegisterDTO;
 
 import java.util.List;
 

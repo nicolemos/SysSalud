@@ -1,7 +1,7 @@
 package io.justina.management.service;
 
-import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
-import io.justina.management.dto.appointment.AppointmentResponseDTO;
+import io.justina.management.dto.request.AppointmentDataRegisterDTO;
+import io.justina.management.dto.response.AppointmentResponseDTO;
 
 import java.util.List;
 

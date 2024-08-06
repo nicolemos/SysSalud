@@ -1,8 +1,8 @@
 package io.justina.management.controller.appointment;
 
 
-import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
-import io.justina.management.dto.appointment.AppointmentResponseDTO;
+import io.justina.management.dto.request.AppointmentDataRegisterDTO;
+import io.justina.management.dto.response.AppointmentResponseDTO;
 import io.justina.management.service.AppointmentService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;

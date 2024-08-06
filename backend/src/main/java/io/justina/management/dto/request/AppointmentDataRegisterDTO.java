@@ -1,4 +1,4 @@
-package io.justina.management.dto.appointment;
+package io.justina.management.dto.request;
 
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;

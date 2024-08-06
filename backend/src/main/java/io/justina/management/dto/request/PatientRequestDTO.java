@@ -1,4 +1,4 @@
-package io.justina.management.dto.patient;
+package io.justina.management.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

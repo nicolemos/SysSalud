@@ -1,8 +1,8 @@
 package io.justina.management.service.impl;
 
 
-import io.justina.management.dto.patient.PatientRequestDTO;
-import io.justina.management.dto.patient.PatientResponseDTO;
+import io.justina.management.dto.request.PatientRequestDTO;
+import io.justina.management.dto.response.PatientResponseDTO;
 import io.justina.management.enums.RoleEnum;
 import io.justina.management.model.Patient;
 import io.justina.management.model.User;

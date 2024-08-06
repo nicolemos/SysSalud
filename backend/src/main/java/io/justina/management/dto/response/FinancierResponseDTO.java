@@ -1,4 +1,4 @@
-package io.justina.management.dto.financier;
+package io.justina.management.dto.response;
 
 
 import lombok.Data;

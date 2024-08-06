@@ -17,7 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "medical_staff")
-public class MedicalStaff implements Serializable {
+public class HealthProfessional implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

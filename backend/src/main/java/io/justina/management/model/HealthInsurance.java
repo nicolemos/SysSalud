@@ -19,7 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Table(name = "financiadores")
 @Entity
-public class Financier {
+public class HealthInsurance {
 
     /**
      * Identificador único del financiador.

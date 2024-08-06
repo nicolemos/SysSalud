@@ -9,7 +9,7 @@ import java.util.UUID;
 /**
  * Interfaz que define los métodos para gestionar financiadores en el sistema.
  */
-public interface IFinancierService {
+public interface HealthInsuranceService {
 
     /**
      * Obtiene todos los financiadores registrados en el sistema.

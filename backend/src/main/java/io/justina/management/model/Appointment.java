@@ -50,7 +50,7 @@ public class Appointment {
      */
     @ManyToOne//(fetch = FetchType.LAZY)
     @JoinColumn(name = "professional_id")
-    private MedicalStaff medicalStaff;
+    private HealthProfessional healthProfessional;
 
 
 

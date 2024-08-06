@@ -2,7 +2,7 @@ package io.justina.management.controller;
 
 import io.justina.management.dto.request.FinancierRegisterDTO;
 import io.justina.management.dto.response.FinancierResponseDTO;
-import io.justina.management.service.IFinancierService;
+import io.justina.management.service.HealthInsuranceService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ import java.util.UUID;
 @RequestMapping("v1/api/financier")
 public class FinancierController {
 
-    private final IFinancierService financierService;
+    private final HealthInsuranceService financierService;
 
     /**
      * Constructor que inyecta el servicio de financieros requerido por el controlador.
@@ -30,7 +30,7 @@ public class FinancierController {
      * @param financierService Servicio de financieros que implementa la lógica de negocio.
      */
     @Autowired
-    public FinancierController(IFinancierService financierService) {
+    public FinancierController(HealthInsuranceService financierService) {
         this.financierService = financierService;
     }
 

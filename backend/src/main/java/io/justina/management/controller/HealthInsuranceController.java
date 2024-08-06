@@ -1,0 +1,46 @@
+package io.justina.management.controller;
+
+import io.justina.management.dto.request.FinancierRegisterDTO;
+import io.justina.management.dto.response.FinancierResponseDTO;
+import io.justina.management.service.HealthInsuranceService;
+import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
+
+/**
+ * Controlador REST que maneja las operaciones relacionadas con los financieros.
+ *
+ * <p>Este controlador maneja las solicitudes REST para operaciones CRUD sobre los financieros,
+ * utilizando rutas bajo el contexto "/v1/api/financier".
+ */
+@RestController
+@RequestMapping("v1/api/financier")
+public class HealthInsuranceController {
+
+    @Autowired
+    private  HealthInsuranceService financierService;
+
+
+    @Operation(summary = "Get all financiers")
+    @GetMapping("/getAll")
+    public ResponseEntity<List<FinancierResponseDTO>> getAllFinanciers() {
+        return ResponseEntity.ok(financierService.getAllFinanciers());
+    }
+
+    @Operation(summary = "Get a financier by ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<FinancierResponseDTO> getFinancierById(@PathVariable UUID id) {
+        return ResponseEntity.ok(financierService.getFinancierById(id));
+    }
+
+    @Operation(summary = "Register a new financier")
+    @PostMapping("/register")
+    public ResponseEntity<FinancierResponseDTO> registerFinancier(@RequestBody @Valid FinancierRegisterDTO financier) {
+        return ResponseEntity.ok(financierService.registerFinancier(financier));
+    }
+}

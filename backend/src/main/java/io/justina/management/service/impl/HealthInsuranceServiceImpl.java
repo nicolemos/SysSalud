@@ -3,6 +3,7 @@ package io.justina.management.service.impl;
 import io.justina.management.dto.request.FinancierRegisterDTO;
 import io.justina.management.dto.response.FinancierResponseDTO;
 import io.justina.management.model.HealthInsurance;
+import io.justina.management.repository.HealthInsuranceRepository;
 import io.justina.management.service.HealthInsuranceService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -18,13 +19,11 @@ import java.util.UUID;
 @Service
 public class HealthInsuranceServiceImpl implements HealthInsuranceService {
 
-    private final io.justina.management.repository.HealthInsurance healthInsurance;
-    private final ModelMapper modelMapper = new ModelMapper();
 
     @Autowired
-    public HealthInsuranceServiceImpl(io.justina.management.repository.HealthInsurance healthInsurance) {
-        this.healthInsurance = healthInsurance;
-    }
+    private HealthInsuranceRepository healthInsurance;
+    private final ModelMapper modelMapper = new ModelMapper();
+
 
     @Override
     public List<FinancierResponseDTO> getAllFinanciers() {
@@ -33,13 +32,6 @@ public class HealthInsuranceServiceImpl implements HealthInsuranceService {
         return modelMapper.map(healthInsuranceList, listType);
     }
 
-    /**
-     * Obtiene un financiador por su ID.
-     *
-     * @param financierId ID del financiador que se desea obtener.
-     * @return DTO que representa al financiador encontrado.
-     * @throws RuntimeException Si el financiador no se encuentra en la base de datos.
-     */
     @Override
     public FinancierResponseDTO getFinancierById(UUID financierId) {
         Optional<HealthInsurance> financierOptional = healthInsurance.findById(financierId);
@@ -51,12 +43,6 @@ public class HealthInsuranceServiceImpl implements HealthInsuranceService {
         }
     }
 
-    /**
-     * Registra un nuevo financiador en el sistema.
-     *
-     * @param financier DTO con los datos del financiador que se desea registrar.
-     * @return DTO que representa al financiador registrado.
-     */
     @Override
     public FinancierResponseDTO registerFinancier(FinancierRegisterDTO financier) {
         HealthInsurance healthInsuranceEntity = modelMapper.map(financier, HealthInsurance.class);

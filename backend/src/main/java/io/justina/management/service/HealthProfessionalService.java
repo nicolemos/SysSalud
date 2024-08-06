@@ -11,5 +11,3 @@ public interface HealthProfessionalService {
 
     List<MedicalStaffResponseDTO> getMedicalStaffByActive();
 }
-
-

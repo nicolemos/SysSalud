@@ -1,7 +1,8 @@
 package io.justina.management.service.impl;
 
+
 import io.justina.management.repository.AppointmentRepository;
-import io.justina.management.repository.HealthProfessional;
+import io.justina.management.repository.HealthProfessionalRepository;
 import io.justina.management.repository.PatientRepository;
 import io.justina.management.service.AppointmentService;
 import jakarta.transaction.Transactional;
@@ -15,16 +16,14 @@ public class AppointmentServiceImpl implements AppointmentService {
 
 
     @Autowired
-    private  AppointmentRepository appointmentRepository;
+    private AppointmentRepository appointmentRepository;
     @Autowired
     private  PatientRepository patientRepository;
+
     @Autowired
-    private HealthProfessional healthProfessional;
+    private HealthProfessionalRepository healthProfessional;
 
     private final ModelMapper modelMapper = new ModelMapper();
-
-
-
 
     @Transactional
     @Override

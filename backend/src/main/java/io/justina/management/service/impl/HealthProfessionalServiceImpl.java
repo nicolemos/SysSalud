@@ -2,6 +2,7 @@ package io.justina.management.service.impl;
 
 import io.justina.management.dto.response.MedicalStaffResponseDTO;
 import io.justina.management.model.HealthProfessional;
+import io.justina.management.repository.HealthProfessionalRepository;
 import io.justina.management.service.HealthProfessionalService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
 public class HealthProfessionalServiceImpl implements HealthProfessionalService {
 
     @Autowired
-    private io.justina.management.repository.HealthProfessional healthProfessional;
+    private HealthProfessionalRepository healthProfessionalRepository;
 
 
 
@@ -23,14 +24,14 @@ public class HealthProfessionalServiceImpl implements HealthProfessionalService 
 
     @Override
     public List<MedicalStaffResponseDTO> getAllMedicalStaff() {
-        List<HealthProfessional> healthProfessionals = healthProfessional.findAll();
+        List<HealthProfessional> healthProfessionals = healthProfessionalRepository.findAll();
         return getMedicalStaffResponseDTOS(healthProfessionals);
     }
 
 
     @Override
     public List<MedicalStaffResponseDTO> getMedicalStaffByActive() {
-        List<HealthProfessional> healthProfessionals = healthProfessional.findByUser_ActiveTrue();
+        List<HealthProfessional> healthProfessionals = healthProfessionalRepository.findAll();
         return getMedicalStaffResponseDTOS(healthProfessionals);
     }
 

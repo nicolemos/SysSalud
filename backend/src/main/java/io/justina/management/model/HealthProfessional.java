@@ -1,4 +1,3 @@
-
 package io.justina.management.model;
 
 
@@ -9,16 +8,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Table(name = "medical_staff")
-public class HealthProfessional implements Serializable {
-
+@Table(name = "profesionales_salud")
+public class HealthProfessional {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_personal_medico")
@@ -36,7 +32,4 @@ public class HealthProfessional implements Serializable {
 
     @Column(name = "descripcion")
     private String description;
-
-
-
 }

@@ -3,23 +3,15 @@ package io.justina.management.service.impl;
 
 import io.justina.management.dto.request.PatientRequestDTO;
 import io.justina.management.dto.response.PatientResponseDTO;
-import io.justina.management.enums.RoleEnum;
 import io.justina.management.model.Patient;
-import io.justina.management.model.User;
 import io.justina.management.repository.PatientRepository;
-import io.justina.management.repository.UserRepository;
 import io.justina.management.service.PatientService;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Implementación del servicio para gestionar pacientes en el sistema.

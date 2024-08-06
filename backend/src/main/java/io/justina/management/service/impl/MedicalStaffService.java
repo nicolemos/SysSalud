@@ -1,22 +1,14 @@
 package io.justina.management.service.impl;
 
-import io.justina.management.dto.request.MedicalStaffRegisterDTO;
 import io.justina.management.dto.response.MedicalStaffResponseDTO;
-import io.justina.management.enums.RoleEnum;
 import io.justina.management.model.MedicalStaff;
-import io.justina.management.model.User;
 import io.justina.management.repository.MedicalStaffRepository;
-import io.justina.management.repository.UserRepository;
 import io.justina.management.service.IMedicalStaffService;
-import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 /**
  * Servicio para la gestión del personal médico.

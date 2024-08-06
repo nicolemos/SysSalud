@@ -1,4 +1,4 @@
-package io.justina.management.service.Appointment;
+package io.justina.management.service.impl;
 
 import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
 import io.justina.management.dto.appointment.AppointmentResponseDTO;
@@ -9,13 +9,12 @@ import io.justina.management.model.Patient;
 import io.justina.management.repository.AppointmentRepository;
 import io.justina.management.repository.MedicalStaffRepository;
 import io.justina.management.repository.PatientRepository;
+import io.justina.management.service.AppointmentService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

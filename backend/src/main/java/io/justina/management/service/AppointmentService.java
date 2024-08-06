@@ -1,4 +1,4 @@
-package io.justina.management.service.Appointment;
+package io.justina.management.service;
 
 import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
 import io.justina.management.dto.appointment.AppointmentResponseDTO;

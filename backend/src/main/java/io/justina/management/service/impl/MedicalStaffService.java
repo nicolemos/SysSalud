@@ -1,4 +1,4 @@
-package io.justina.management.service.medicalstaff;
+package io.justina.management.service.impl;
 
 import io.justina.management.dto.medicalstaff.MedicalStaffRegisterDTO;
 import io.justina.management.dto.medicalstaff.MedicalStaffResponseDTO;
@@ -7,6 +7,7 @@ import io.justina.management.model.MedicalStaff;
 import io.justina.management.model.User;
 import io.justina.management.repository.MedicalStaffRepository;
 import io.justina.management.repository.UserRepository;
+import io.justina.management.service.IMedicalStaffService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ import java.util.stream.Collectors;
  */
 
 @Service
-public class MedicalStaffService implements IMedicalStaffService{
+public class MedicalStaffService implements IMedicalStaffService {
 
     private final MedicalStaffRepository medicalStaffRepository;
     private final BCryptPasswordEncoder passwordEncoder;

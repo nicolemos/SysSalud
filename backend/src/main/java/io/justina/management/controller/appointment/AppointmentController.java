@@ -3,7 +3,7 @@ package io.justina.management.controller.appointment;
 
 import io.justina.management.dto.appointment.AppointmentDataRegisterDTO;
 import io.justina.management.dto.appointment.AppointmentResponseDTO;
-import io.justina.management.service.Appointment.AppointmentService;
+import io.justina.management.service.AppointmentService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

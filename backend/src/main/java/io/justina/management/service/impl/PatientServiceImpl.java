@@ -1,4 +1,4 @@
-package io.justina.management.service.patient;
+package io.justina.management.service.impl;
 
 
 import io.justina.management.dto.patient.PatientRequestDTO;
@@ -8,6 +8,7 @@ import io.justina.management.model.Patient;
 import io.justina.management.model.User;
 import io.justina.management.repository.PatientRepository;
 import io.justina.management.repository.UserRepository;
+import io.justina.management.service.PatientService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;

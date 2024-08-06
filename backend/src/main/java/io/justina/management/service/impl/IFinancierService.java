@@ -1,4 +1,4 @@
-package io.justina.management.service.financier;
+package io.justina.management.service.impl;
 
 import io.justina.management.dto.financier.FinancierRegisterDTO;
 import io.justina.management.dto.financier.FinancierResponseDTO;

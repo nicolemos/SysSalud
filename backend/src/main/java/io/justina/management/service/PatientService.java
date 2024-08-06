@@ -1,4 +1,4 @@
-package io.justina.management.service.patient;
+package io.justina.management.service;
 
 
 import io.justina.management.dto.patient.PatientRequestDTO;

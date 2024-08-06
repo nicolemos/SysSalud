@@ -3,7 +3,7 @@ package io.justina.management.controller.medicalstaff;
 import io.justina.management.dto.medicalstaff.MedicalStaffRegisterDTO;
 import io.justina.management.dto.medicalstaff.MedicalStaffResponseDTO;
 import io.justina.management.service.authentication.AuthenticationService;
-import io.justina.management.service.medicalstaff.IMedicalStaffService;
+import io.justina.management.service.IMedicalStaffService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

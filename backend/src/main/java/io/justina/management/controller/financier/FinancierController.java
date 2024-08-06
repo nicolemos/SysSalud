@@ -2,7 +2,7 @@ package io.justina.management.controller.financier;
 
 import io.justina.management.dto.financier.FinancierRegisterDTO;
 import io.justina.management.dto.financier.FinancierResponseDTO;
-import io.justina.management.service.financier.IFinancierService;
+import io.justina.management.service.impl.IFinancierService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
